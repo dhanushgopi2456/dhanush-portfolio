@@ -7,7 +7,6 @@ Welcome to the source code of my **personal portfolio website**, built to showca
 ## 🧰 Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Framework**: React.js (if used)
 - **Styling**: Tailwind CSS / Bootstrap / Custom CSS
 - **Deployment**: GitHub Pages / Vercel / Netlify
 
