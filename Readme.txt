@@ -7,8 +7,8 @@ Welcome to the source code of my **personal portfolio website**, built to showca
 ## 🧰 Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Styling**: Tailwind CSS / Bootstrap / Custom CSS
-- **Deployment**: GitHub Pages / Vercel / Netlify
+- **Styling**:  Bootstrap / Custom CSS
+- **Deployment**: Netlify
 
 ## ✨ Features
 
@@ -27,23 +27,12 @@ dhanush-portfolio/
 ├── src/
 │ ├── components/
 │ ├── assets/
-│ ├── App.jsx
+│
 │ └── ...
 ├── package.json
 ├── README.md
 └── ...
 
-
-## 🚀 Getting Started
-
-1. **Clone the Repository**
-```bash
-git clone https://github.com/dhanushgopi2456/dhanush-portfolio
-cd dhanush-portfolio
-
-npm install
-npm run build
-npm run dev
 
 🧑‍💻 About Me
 I’m Dhanush Gopi Kavala, an aspiring software developer and AI/ML enthusiast, currently pursuing my B.Tech. I have completed multiple internships, certifications, and developed real-world applications using full-stack technologies and data science tools.
