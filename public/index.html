@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Dhanush Gopi Kavala - Full-Stack Developer & AI Enthusiast. Portfolio showcasing projects, skills, and certifications.">
+  <meta name="keywords" content="Dhanush Gopi Kavala, Full-Stack Developer, AI, Web Development, Portfolio">
+  <meta name="author" content="Dhanush Gopi Kavala">
+  <title>Dhanush Gopi Kavala | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <!-- Particle Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <span class="loader-text">DGK</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+        <p class="hero-greeting">
+          <span class="greeting-wave">👋</span> Hello, I'm
+        </p>
+        <h1 class="hero-name">
+          <span class="name-line">Dhanush Gopi</span>
+          <span class="name-line accent">Kavala</span>
+        </h1>
+        <div class="hero-title">
+          <span class="title-prefix">I'm a </span>
+          <span class="typing-wrapper">
+            <span id="typed-text" class="typed-text"></span>
+            <span class="typing-cursor">|</span>
+          </span>
+        </div>
+        <p class="hero-description" id="hero-objective">
+          Passionate about building scalable web applications and exploring AI/ML technologies.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Get In Touch</span>
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/dhanushgopi2456" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dhanush-gopi-kavala" target="_blank" class="social-link"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://x.com/home" target="_blank" class="social-link" aria-label="Twitter">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.geeksforgeeks.org/profile/gopidhan1xwf" target="_blank" class="social-link"
+            aria-label="GeeksforGeeks">
+            <span class="custom-icon">GfG</span>
+          </a>
+          <a href="https://leetcode.com/u/Dhanush_Gopi/" target="_blank" class="social-link" aria-label="LeetCode">
+            <span class="custom-icon">LC</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="hero-image-container">
+          <div class="image-glow"></div>
+          <div class="image-border-animation"></div>
+          <img src="/images/profile.jpg" alt="Dhanush Gopi Kavala" class="hero-image" id="hero-profile-img">
+        </div>
+        <div class="hero-floating-badge badge-1">
+          <i class="fas fa-code"></i>
+          <span>Developer</span>
+        </div>
+        <div class="hero-floating-badge badge-2">
+          <i class="fas fa-brain"></i>
+          <span>AI/ML</span>
+        </div>
+        <div class="hero-floating-badge badge-3">
+          <i class="fas fa-certificate"></i>
+          <span>Certified</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper" data-aos="fade-right" data-aos-duration="800">
+          <div class="about-image-container">
+            <img src="/images/about.jpg" alt="Dhanush Gopi Kavala" class="about-image" id="about-img">
+            <div class="about-image-overlay"></div>
+          </div>
+          <div class="experience-badge">
+            <span class="exp-number">3+</span>
+            <span class="exp-text">Years of<br>Coding</span>
+          </div>
+        </div>
+        <div class="about-content" data-aos="fade-left" data-aos-duration="800">
+          <h3 class="about-subtitle">Full-Stack Developer & AI Enthusiast</h3>
+          <p class="about-text" id="about-objective">
+            To leverage my project experience in AI and web development in a challenging role that improves continuous
+            learning and contributes to organizational success.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value" id="about-degree">B.Tech, CSE</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-university"></i>
+              <div>
+                <span class="info-label">College</span>
+                <span class="info-value" id="about-college">Sri Vasavi Engineering College</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value" id="about-email">gopidhanush615@gmail.com</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="info-label">Phone</span>
+                <span class="info-value" id="about-phone">+91-6281716735</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Talk</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="timeline" id="education-timeline" data-aos="fade-up" data-aos-delay="200">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="main">Main Projects</button>
+        <button class="filter-btn" data-filter="practice">Practice Projects</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid" id="skills-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section certifications-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="accent">Certifications</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="certifications-grid" id="certifications-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">My <span class="accent">Achievements</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Let's work together!</h3>
+          <p>Feel free to reach out for collaborations, opportunities, or just a friendly chat about tech!</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <span class="detail-label">Email</span>
+                <a href="mailto:gopidhanush615@gmail.com" class="detail-value"
+                  id="contact-email">gopidhanush615@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <span class="detail-label">Phone</span>
+                <a href="tel:+916281716735" class="detail-value" id="contact-phone">+91-6281716735</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value" id="contact-location">Tadepalligudem, Andhra Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/dhanushgopi2456" target="_blank" class="social-circle" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dhanush-gopi-kavala" target="_blank" class="social-circle"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/home" target="_blank" class="social-circle" aria-label="Twitter"><i
+                class="fab fa-x-twitter"></i></a>
+            <a href="https://www.geeksforgeeks.org/profile/gopidhan1xwf" target="_blank" class="social-circle"
+              aria-label="GeeksforGeeks"><span class="custom-icon">GfG</span></a>
+            <a href="https://leetcode.com/u/Dhanush_Gopi/" target="_blank" class="social-circle"
+              aria-label="LeetCode"><span class="custom-icon">LC</span></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="contact-form-email" name="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="contact-subject" name="subject" placeholder="Subject" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-dots"></i>
+                <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display:none;">
+                <i class="fas fa-spinner fa-spin"></i> Sending...
+              </span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">Dhanush</span>
+        </div>
+        <p class="footer-text">Crafted with <span class="heart">❤</span> by Dhanush Gopi Kavala</p>
+        <div class="footer-socials">
+          <a href="https://github.com/dhanushgopi2456" target="_blank" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/dhanush-gopi-kavala" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/home" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.geeksforgeeks.org/profile/gopidhan1xwf" target="_blank" aria-label="GeeksforGeeks"><span
+              class="custom-icon">GfG</span></a>
+          <a href="https://leetcode.com/u/Dhanush_Gopi/" target="_blank" aria-label="LeetCode"><span
+              class="custom-icon">LC</span></a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Dhanush Gopi Kavala. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="/js/particles.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

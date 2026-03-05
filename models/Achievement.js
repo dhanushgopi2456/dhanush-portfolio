@@ -1,0 +1,11 @@
+const mongoose = require('mongoose');
+
+const achievementSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    description: { type: String },
+    link: { type: String },
+    date: { type: String },
+    order: { type: Number, default: 0 }
+}, { timestamps: true });
+
+module.exports = mongoose.model('Achievement', achievementSchema);
