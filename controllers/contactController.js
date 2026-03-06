@@ -22,27 +22,28 @@ exports.submitContact = async (req, res) => {
         const contact = new Contact({ name, email, subject, message });
         await contact.save();
 
-        // Send email notification
-        try {
-            console.log('📧 Email config:', { user: process.env.EMAIL_USER, to: process.env.EMAIL_TO, passSet: !!process.env.EMAIL_PASS });
-            if (process.env.EMAIL_USER && process.env.EMAIL_PASS &&
-                process.env.EMAIL_USER !== 'your_gmail@gmail.com') {
-                const transporter = nodemailer.createTransport({
-                    service: 'gmail',
-                    auth: {
-                        user: process.env.EMAIL_USER,
-                        pass: process.env.EMAIL_PASS
-                    }
-                });
+        // Respond immediately — don't wait for email
+        res.status(201).json({ message: 'Message sent successfully! I will get back to you soon.' });
 
-                const mailResult = await transporter.sendMail({
-                    from: process.env.EMAIL_USER,
-                    to: process.env.EMAIL_TO || process.env.EMAIL_USER,
-                    replyTo: email,
-                    subject: `Portfolio Contact: ${subject}`,
-                    html: `
+        // Send email in background (fire-and-forget)
+        if (process.env.EMAIL_USER && process.env.EMAIL_PASS &&
+            process.env.EMAIL_USER !== 'your_gmail@gmail.com') {
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS
+                }
+            });
+
+            transporter.sendMail({
+                from: process.env.EMAIL_USER,
+                to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+                replyTo: email,
+                subject: `Portfolio Contact: ${subject}`,
+                html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-              <h2 style="color: #6c63ff; border-bottom: 2px solid #6c63ff; padding-bottom: 10px;">📬 New Portfolio Contact</h2>
+              <h2 style="color: #6c63ff; border-bottom: 2px solid #6c63ff; padding-bottom: 10px;">New Portfolio Contact</h2>
               <table style="width: 100%; border-collapse: collapse;">
                 <tr><td style="padding: 10px; font-weight: bold; color: #333;">Name:</td><td style="padding: 10px;">${name}</td></tr>
                 <tr style="background: #f8f9fa;"><td style="padding: 10px; font-weight: bold; color: #333;">Email:</td><td style="padding: 10px;"><a href="mailto:${email}">${email}</a></td></tr>
@@ -56,16 +57,12 @@ exports.submitContact = async (req, res) => {
               <p style="font-size: 12px; color: #999; text-align: center;">Sent from your Portfolio Website contact form</p>
             </div>
           `
-                });
-                console.log('✅ Email sent successfully:', mailResult.messageId);
-            } else {
-                console.log('⚠️ Email not configured - skipping email notification');
-            }
-        } catch (emailError) {
-            console.log('❌ Email error:', emailError.message);
+            }).then(result => {
+                console.log('Email sent:', result.messageId);
+            }).catch(err => {
+                console.log('Email failed:', err.message);
+            });
         }
-
-        res.status(201).json({ message: 'Message sent successfully! I will get back to you soon.' });
     } catch (error) {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
